@@ -5,6 +5,16 @@
 * CentOS 7
 * MySQL community server 5.6.26
 
+## Configuration
+
+| Env Variable | Description | Default value |
+|--------------|-------------|---------------|
+| DATADIR | The location for the DB files. Please note that within this root dir the mysql sub dir will be created | /var/lib/ |
+| MYSQL_ROOT_PASSWORD | The DB super admin (root) password. If this env var is being set, and the data store under DATADIR/mysql has not been initialized, a new root user with full access will be created initially | N/A |
+| MYSQL_DATABASE | An additional DB to be created | N/A |
+| MYSQL_USER | The DB user | N/A |
+| MYSQL_PASSWORD | The DB user password | N/A |
+
 ## User Guide
 
 ### Prepare
