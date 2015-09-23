@@ -47,3 +47,10 @@ docker run --name=<container name>-data -v /var/lib/mysql <user>/<image name> tr
 ```
 docker run --name=<container name> -d -p 3306:3306 --volumes-from=<image name>-data -e MYSQL_ROOT_PASSWORD=<password> <user>/<image name>
 ```
+
+#### Automated
+
+* Use the included [docker compose file](docker-compose.yml) and run the following command to create and run everything required:
+```
+docker-compose up -d
+```

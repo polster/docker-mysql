@@ -1,0 +1,18 @@
+# the sql server data store container
+db-server-data:
+  image: "polster/docker-mysql"
+  container_name: "db-server-data"
+  command: "/bin/true"
+  volumes:
+    - "/var/lib/mysql"
+
+# the sql server container
+db-server:
+  image: "polster/docker-mysql"
+  container_name: "db-server"
+  ports:
+    - "3306:3306"
+  volumes_from:
+    - "db-server-data"
+  environment:
+    MYSQL_ROOT_PASSWORD: "test12345"
